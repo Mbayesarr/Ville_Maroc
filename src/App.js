@@ -1,25 +1,20 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react'
+import ListVille from './Composents/ListVille'
 
-function App() {
+const App = () => {
+
+  const [Listville, setListVille] = useState(["Ville 1", "Ville 2"]);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <div>
+      <header>
+        <h1 className="text-center">LES VILLES DE MAROC</h1>
+        
       </header>
+      <hr color="gray" />
+      <ListVille ville={Listville} />
     </div>
-  );
+
+  )
 }
 
-export default App;
+export default App
